@@ -47,6 +47,8 @@ class GameScene: SKScene {
         player.position = CGPoint(x: 150, y: 250)
         // Add the player node to the scene:
         self.addChild(player)
+        bee2.physicsBody?.mass = 0.2
+        bee2.physicsBody?.applyImpulse(CGVector(dx: -25, dy: 0))
     }
     
     override func didSimulatePhysics() {
