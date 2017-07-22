@@ -15,12 +15,29 @@ class Player: SKSpriteNode, GameSprite {
     var flyAnimation = SKAction()
     var soarAnimation = SKAction()
     
+    // Store whether we are flapping our wings or in free-fall:
+    var flapping = false
+    // Set a maximum upward force:
+    let maxFlappingForce: CGFloat = 57000
+    // Pierre should slow down when he flies too high:
+    let maxHeight: CGFloat = 1000
+    
     init() {
         // Call the init function on the base class (SKSpriteNode)
         super.init(texture: nil, color: .clear, size: initialSize)
         createAnimations()
         // If we run an action with a key, "flapAnimation", we can later reference that key to remove the action.
-        self.run(flyAnimation, withKey: "flapAnimation")
+        self.run(flyAnimation, withKey: "soarAnimation")
+        // Create a physics body based on one frame of Pierre's animation.
+        // We will use the third frame, when his wings are tucked in
+        let bodyTexture = textureAtlas.textureNamed("pierre-flying-3")
+        self.physicsBody = SKPhysicsBody(texture: bodyTexture, size: self.size)
+        // Pierre will lose momentum quickly with a high linearDamping:
+        self.physicsBody?.linearDamping = 0.9
+        // Adult penguins weigh around 30kg:
+        self.physicsBody?.mass = 30
+        // Prevent Pierre from rotating:
+        self.physicsBody?.allowsRotation = false
     }
     
     func createAnimations() {
@@ -50,10 +67,45 @@ class Player: SKSpriteNode, GameSprite {
     }
     
     // Implement onTap to conform to the GameSprite protocol:
-    func onTap() {}
+    func onTap() {
+    }
     
     // Satisfy the NSCoder required init:
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    func update() {
+        // If flapping, apply a new force to push Pierre higher.
+        if self.flapping {
+            var forceToApply = maxFlappingForce
+            // Apply less force if Pierre is above position 600
+            if position.y > 600 {
+                // The higher Pierre goes, the more force we remove. These next three lines determine the force to subtract:
+                let percentageOfMaxHeight = position.y / maxHeight
+                let flappingForceSubtraction = percentageOfMaxHeight * maxFlappingForce
+                forceToApply -= flappingForceSubtraction
+            }
+            // Apply the final force:
+            self.physicsBody?.applyForce(CGVector(dx: 0, dy: forceToApply))
+        }
+        // Limit Pierre's top speed as he climbs the y-axis. This prevents him from gaining enough momentum to shoot over our max height:
+        if self.physicsBody!.velocity.dy > 300 {
+            self.physicsBody!.velocity.dy = 300
+        }
+    }
+    
+    // Begin the flap animation, set flapping to true:
+    func startFlapping() {
+        self.removeAction(forKey: "soarAnimation")
+        self.run(flyAnimation, withKey: "flapAnimation")
+        self.flapping = true
+    }
+    
+    // Stop the flap animation, set flapping to false:
+    func stopFlapping() {
+        self.removeAction(forKey: "flapAnimation")
+        self.run(soarAnimation, withKey: "soarAnimation")
+        self.flapping = false
     }
 }
