@@ -15,7 +15,8 @@ class GameScene: SKScene {
     let ground = Ground()
     let player = Player()
     var ScreenCenterY = CGFloat()
-    
+    let initialPlayerPosition = CGPoint(x: 150, y: 250)
+    var playerProgress = CGFloat()
     
     // MARK: - View Life Cycle
     override func didMove(to view: SKView) {
@@ -45,7 +46,7 @@ class GameScene: SKScene {
         self.addChild(ground)
         
         // Position the player:
-        player.position = CGPoint(x: 150, y: 250)
+        player.position = initialPlayerPosition
         // Add the player node to the scene:
         self.addChild(player)
         
@@ -98,6 +99,11 @@ class GameScene: SKScene {
             let newScale = 1 + percentOfMaxHeight
             cam.yScale = newScale
             cam.xScale = newScale
+            
+            // Keep track of how far the player has flown
+            playerProgress = player.position.x - initialPlayerPosition.x
+            // Check to see if the ground should jump forward:
+            ground.checkForReposition(playerProgress: playerProgress)
         }
         
         // Move the camera for our adjustment:
