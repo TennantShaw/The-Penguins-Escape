@@ -18,6 +18,7 @@
 		30B1C2A21F2257C300B3C55F /* GameSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1C2A11F2257C300B3C55F /* GameSprite.swift */; };
 		30B1C2A41F2258AC00B3C55F /* Bee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1C2A31F2258AC00B3C55F /* Bee.swift */; };
 		30B1C2A61F2267B800B3C55F /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1C2A51F2267B800B3C55F /* Ground.swift */; };
+		30B1C2A81F23193900B3C55F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1C2A71F23193900B3C55F /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		30B1C2A11F2257C300B3C55F /* GameSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSprite.swift; sourceTree = "<group>"; };
 		30B1C2A31F2258AC00B3C55F /* Bee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bee.swift; sourceTree = "<group>"; };
 		30B1C2A51F2267B800B3C55F /* Ground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
+		30B1C2A71F23193900B3C55F /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				30B1C2A11F2257C300B3C55F /* GameSprite.swift */,
 				30B1C2A51F2267B800B3C55F /* Ground.swift */,
 				30B1C2A31F2258AC00B3C55F /* Bee.swift */,
+				30B1C2A71F23193900B3C55F /* Player.swift */,
 				30B1C28F1F21196900B3C55F /* GameViewController.swift */,
 				30B1C2911F21196900B3C55F /* Main.storyboard */,
 				30B1C2941F21196900B3C55F /* Assets.xcassets */,
@@ -161,6 +164,7 @@
 				30B1C2A41F2258AC00B3C55F /* Bee.swift in Sources */,
 				30B1C2A21F2257C300B3C55F /* GameSprite.swift in Sources */,
 				30B1C28E1F21196900B3C55F /* GameScene.swift in Sources */,
+				30B1C2A81F23193900B3C55F /* Player.swift in Sources */,
 				30B1C2901F21196900B3C55F /* GameViewController.swift in Sources */,
 				30B1C2881F21196900B3C55F /* AppDelegate.swift in Sources */,
 			);
