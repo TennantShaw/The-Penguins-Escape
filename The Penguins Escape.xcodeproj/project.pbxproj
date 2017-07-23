@@ -23,6 +23,7 @@
 		30F0CAD21F253E3900519D82 /* MadFly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CAD11F253E3900519D82 /* MadFly.swift */; };
 		30F0CAD41F253F9800519D82 /* Bat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CAD31F253F9800519D82 /* Bat.swift */; };
 		30F0CAD61F2540E400519D82 /* Blade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CAD51F2540E400519D82 /* Blade.swift */; };
+		30F0CAD81F25427300519D82 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CAD71F25427300519D82 /* Coin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		30F0CAD11F253E3900519D82 /* MadFly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadFly.swift; sourceTree = "<group>"; };
 		30F0CAD31F253F9800519D82 /* Bat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bat.swift; sourceTree = "<group>"; };
 		30F0CAD51F2540E400519D82 /* Blade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blade.swift; sourceTree = "<group>"; };
+		30F0CAD71F25427300519D82 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,23 +78,24 @@
 		30B1C2861F21196900B3C55F /* The Penguins Escape */ = {
 			isa = PBXGroup;
 			children = (
-				30B1C2871F21196900B3C55F /* AppDelegate.swift */,
-				30B1C2891F21196900B3C55F /* GameScene.sks */,
+				30B1C2991F21196900B3C55F /* Info.plist */,
 				30B1C28B1F21196900B3C55F /* Actions.sks */,
+				30B1C2891F21196900B3C55F /* GameScene.sks */,
+				30B1C2871F21196900B3C55F /* AppDelegate.swift */,
+				30F0CAD31F253F9800519D82 /* Bat.swift */,
+				30B1C2A31F2258AC00B3C55F /* Bee.swift */,
+				30F0CAD51F2540E400519D82 /* Blade.swift */,
+				30F0CAD71F25427300519D82 /* Coin.swift */,
 				30B1C28D1F21196900B3C55F /* GameScene.swift */,
 				30B1C2A11F2257C300B3C55F /* GameSprite.swift */,
-				30B1C2A51F2267B800B3C55F /* Ground.swift */,
-				30B1C2A31F2258AC00B3C55F /* Bee.swift */,
-				30F0CACF1F253B9B00519D82 /* Star.swift */,
-				30F0CAD11F253E3900519D82 /* MadFly.swift */,
-				30F0CAD31F253F9800519D82 /* Bat.swift */,
-				30F0CAD51F2540E400519D82 /* Blade.swift */,
-				30B1C2A71F23193900B3C55F /* Player.swift */,
 				30B1C28F1F21196900B3C55F /* GameViewController.swift */,
-				30B1C2911F21196900B3C55F /* Main.storyboard */,
+				30B1C2A51F2267B800B3C55F /* Ground.swift */,
+				30F0CAD11F253E3900519D82 /* MadFly.swift */,
+				30B1C2A71F23193900B3C55F /* Player.swift */,
+				30F0CACF1F253B9B00519D82 /* Star.swift */,
 				30B1C2941F21196900B3C55F /* Assets.xcassets */,
 				30B1C2961F21196900B3C55F /* LaunchScreen.storyboard */,
-				30B1C2991F21196900B3C55F /* Info.plist */,
+				30B1C2911F21196900B3C55F /* Main.storyboard */,
 			);
 			path = "The Penguins Escape";
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				30B1C28E1F21196900B3C55F /* GameScene.swift in Sources */,
 				30B1C2A81F23193900B3C55F /* Player.swift in Sources */,
 				30F0CAD41F253F9800519D82 /* Bat.swift in Sources */,
+				30F0CAD81F25427300519D82 /* Coin.swift in Sources */,
 				30B1C2901F21196900B3C55F /* GameViewController.swift in Sources */,
 				30B1C2881F21196900B3C55F /* AppDelegate.swift in Sources */,
 				30F0CAD61F2540E400519D82 /* Blade.swift in Sources */,
