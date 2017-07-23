@@ -22,6 +22,7 @@
 		30F0CAD01F253B9B00519D82 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CACF1F253B9B00519D82 /* Star.swift */; };
 		30F0CAD21F253E3900519D82 /* MadFly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CAD11F253E3900519D82 /* MadFly.swift */; };
 		30F0CAD41F253F9800519D82 /* Bat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CAD31F253F9800519D82 /* Bat.swift */; };
+		30F0CAD61F2540E400519D82 /* Blade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CAD51F2540E400519D82 /* Blade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		30F0CACF1F253B9B00519D82 /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		30F0CAD11F253E3900519D82 /* MadFly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadFly.swift; sourceTree = "<group>"; };
 		30F0CAD31F253F9800519D82 /* Bat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bat.swift; sourceTree = "<group>"; };
+		30F0CAD51F2540E400519D82 /* Blade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				30F0CACF1F253B9B00519D82 /* Star.swift */,
 				30F0CAD11F253E3900519D82 /* MadFly.swift */,
 				30F0CAD31F253F9800519D82 /* Bat.swift */,
+				30F0CAD51F2540E400519D82 /* Blade.swift */,
 				30B1C2A71F23193900B3C55F /* Player.swift */,
 				30B1C28F1F21196900B3C55F /* GameViewController.swift */,
 				30B1C2911F21196900B3C55F /* Main.storyboard */,
@@ -177,6 +180,7 @@
 				30F0CAD41F253F9800519D82 /* Bat.swift in Sources */,
 				30B1C2901F21196900B3C55F /* GameViewController.swift in Sources */,
 				30B1C2881F21196900B3C55F /* AppDelegate.swift in Sources */,
+				30F0CAD61F2540E400519D82 /* Blade.swift in Sources */,
 				30F0CAD21F253E3900519D82 /* MadFly.swift in Sources */,
 				30F0CAD01F253B9B00519D82 /* Star.swift in Sources */,
 			);
