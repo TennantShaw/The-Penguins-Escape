@@ -20,6 +20,7 @@
 		30B1C2A61F2267B800B3C55F /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1C2A51F2267B800B3C55F /* Ground.swift */; };
 		30B1C2A81F23193900B3C55F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1C2A71F23193900B3C55F /* Player.swift */; };
 		30F0CAD01F253B9B00519D82 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CACF1F253B9B00519D82 /* Star.swift */; };
+		30F0CAD21F253E3900519D82 /* MadFly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CAD11F253E3900519D82 /* MadFly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		30B1C2A51F2267B800B3C55F /* Ground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		30B1C2A71F23193900B3C55F /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		30F0CACF1F253B9B00519D82 /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		30F0CAD11F253E3900519D82 /* MadFly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadFly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				30B1C2A51F2267B800B3C55F /* Ground.swift */,
 				30B1C2A31F2258AC00B3C55F /* Bee.swift */,
 				30F0CACF1F253B9B00519D82 /* Star.swift */,
+				30F0CAD11F253E3900519D82 /* MadFly.swift */,
 				30B1C2A71F23193900B3C55F /* Player.swift */,
 				30B1C28F1F21196900B3C55F /* GameViewController.swift */,
 				30B1C2911F21196900B3C55F /* Main.storyboard */,
@@ -170,6 +173,7 @@
 				30B1C2A81F23193900B3C55F /* Player.swift in Sources */,
 				30B1C2901F21196900B3C55F /* GameViewController.swift in Sources */,
 				30B1C2881F21196900B3C55F /* AppDelegate.swift in Sources */,
+				30F0CAD21F253E3900519D82 /* MadFly.swift in Sources */,
 				30F0CAD01F253B9B00519D82 /* Star.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
