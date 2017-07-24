@@ -21,6 +21,7 @@
 		30B1C2A61F2267B800B3C55F /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1C2A51F2267B800B3C55F /* Ground.swift */; };
 		30B1C2A81F23193900B3C55F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1C2A71F23193900B3C55F /* Player.swift */; };
 		30BA7FD31F26452B005F2640 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BA7FD21F26452B005F2640 /* Background.swift */; };
+		30BA7FD51F264B7F005F2640 /* PierrePath.sks in Resources */ = {isa = PBXBuildFile; fileRef = 30BA7FD41F264B7F005F2640 /* PierrePath.sks */; };
 		30F0CAD01F253B9B00519D82 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CACF1F253B9B00519D82 /* Star.swift */; };
 		30F0CAD21F253E3900519D82 /* MadFly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CAD11F253E3900519D82 /* MadFly.swift */; };
 		30F0CAD41F253F9800519D82 /* Bat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CAD31F253F9800519D82 /* Bat.swift */; };
@@ -49,6 +50,7 @@
 		30B1C2A51F2267B800B3C55F /* Ground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		30B1C2A71F23193900B3C55F /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		30BA7FD21F26452B005F2640 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		30BA7FD41F264B7F005F2640 /* PierrePath.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PierrePath.sks; sourceTree = "<group>"; };
 		30F0CACF1F253B9B00519D82 /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		30F0CAD11F253E3900519D82 /* MadFly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadFly.swift; sourceTree = "<group>"; };
 		30F0CAD31F253F9800519D82 /* Bat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bat.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				30F0CAD31F253F9800519D82 /* Bat.swift */,
 				30B1C2A31F2258AC00B3C55F /* Bee.swift */,
 				30F0CAD51F2540E400519D82 /* Blade.swift */,
+				30BA7FD41F264B7F005F2640 /* PierrePath.sks */,
 				30F0CAD71F25427300519D82 /* Coin.swift */,
 				30F0CADC1F254BCB00519D82 /* EncounterManager.swift */,
 				30B1C28D1F21196900B3C55F /* GameScene.swift */,
@@ -192,6 +195,7 @@
 				30F0CAE11F254F2600519D82 /* EncounterC.sks in Resources */,
 				30B1C2951F21196900B3C55F /* Assets.xcassets in Resources */,
 				30F0CADB1F25494700519D82 /* EncounterA.sks in Resources */,
+				30BA7FD51F264B7F005F2640 /* PierrePath.sks in Resources */,
 				30B1C2981F21196900B3C55F /* LaunchScreen.storyboard in Resources */,
 				30B1C28C1F21196900B3C55F /* Actions.sks in Resources */,
 			);

@@ -77,6 +77,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         backgrounds[0].spawn(parentNode: self, imageName: "background-front", zPosition: -5, movementMultiplier: 0.75)
         backgrounds[1].spawn(parentNode: self, imageName: "background-middle", zPosition: -10, movementMultiplier: 0.5)
         backgrounds[2].spawn(parentNode: self, imageName: "background-back", zPosition: -15, movementMultiplier: 0.2)
+        
+        // Instantiate a SKEmitterNode with PierrePath design:
+        if let dotEmitter = SKEmitterNode(fileNamed: "PierrePath") {
+            // Position the penguin in front of other game objects:
+            player.zPosition = 10
+            // Place the particle zPosition behind the penguin:
+            dotEmitter.particleZPosition = -1
+            // By adding the emitter node to the player, the emitter moves with the penguin and emits new dots wherever the player is.
+            player.addChild(dotEmitter)
+            // However, the particles themselves should target the scene, so they trail behind as the player moves forward.
+            dotEmitter.targetNode = self
+        }
     }
     
     
