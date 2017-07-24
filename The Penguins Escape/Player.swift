@@ -123,6 +123,32 @@ class Player: SKSpriteNode, GameSprite {
             fadeOutAndIn,
             damageEnd
             ])
+        // Create the death animation:
+        let startDie = SKAction.run {
+            // Switch to the death texture with X eyes:
+            self.texture = self.textureAtlas.textureNamed("pierre-dead")
+            // Suspend the penguin in space:
+            self.physicsBody?.affectedByGravity = false
+            // Stop any movement:
+            self.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+        }
+        
+        let endDie = SKAction.run {
+            // Turn gravity back on:
+            self.physicsBody?.affectedByGravity = true
+        }
+        
+        self.dieAnimation = SKAction.sequence([
+            startDie,
+            // Scale the penguin bigger:
+            SKAction.scale(to: 1.3, duration: 0.5),
+            // Use the waitForDurationAction to provide a short pause:
+            SKAction.wait(forDuration: 0.5),
+            // Rotate the penguin on to his back:
+            SKAction.rotate(toAngle: 3, duration: 1.5),
+            SKAction.wait(forDuration: 0.5),
+            endDie
+            ])
     }
     
     // Implement onTap to conform to the GameSprite protocol:
