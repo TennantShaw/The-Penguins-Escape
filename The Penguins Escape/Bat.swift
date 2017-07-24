@@ -22,6 +22,8 @@ class Bat: SKSpriteNode, GameSprite {
         self.physicsBody?.affectedByGravity = false
         createAnimations()
         self.run(flyAnimation)
+        self.physicsBody?.categoryBitMask = PhysicsCategory.enemy.rawValue
+        self.physicsBody?.collisionBitMask = ~PhysicsCategory.damagedPenguin.rawValue
     }
     
     required init?(coder aDecoder: NSCoder) {

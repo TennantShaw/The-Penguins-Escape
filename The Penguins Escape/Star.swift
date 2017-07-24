@@ -24,6 +24,7 @@ class Star: SKSpriteNode, GameSprite {
         // Create our star animation and start it:
         createAnimations()
         self.run(pulseAnimation)
+        self.physicsBody?.categoryBitMask = PhysicsCategory.powerup.rawValue
     }
     
     required init?(coder aDecoder: NSCoder) {
