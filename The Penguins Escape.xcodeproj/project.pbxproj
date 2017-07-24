@@ -20,6 +20,7 @@
 		30B1C2A41F2258AC00B3C55F /* Bee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1C2A31F2258AC00B3C55F /* Bee.swift */; };
 		30B1C2A61F2267B800B3C55F /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1C2A51F2267B800B3C55F /* Ground.swift */; };
 		30B1C2A81F23193900B3C55F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1C2A71F23193900B3C55F /* Player.swift */; };
+		30BA7FD31F26452B005F2640 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BA7FD21F26452B005F2640 /* Background.swift */; };
 		30F0CAD01F253B9B00519D82 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CACF1F253B9B00519D82 /* Star.swift */; };
 		30F0CAD21F253E3900519D82 /* MadFly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CAD11F253E3900519D82 /* MadFly.swift */; };
 		30F0CAD41F253F9800519D82 /* Bat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CAD31F253F9800519D82 /* Bat.swift */; };
@@ -47,6 +48,7 @@
 		30B1C2A31F2258AC00B3C55F /* Bee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bee.swift; sourceTree = "<group>"; };
 		30B1C2A51F2267B800B3C55F /* Ground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		30B1C2A71F23193900B3C55F /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		30BA7FD21F26452B005F2640 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		30F0CACF1F253B9B00519D82 /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		30F0CAD11F253E3900519D82 /* MadFly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadFly.swift; sourceTree = "<group>"; };
 		30F0CAD31F253F9800519D82 /* Bat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bat.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				30B1C28B1F21196900B3C55F /* Actions.sks */,
 				30B1C2891F21196900B3C55F /* GameScene.sks */,
 				30B1C2871F21196900B3C55F /* AppDelegate.swift */,
+				30BA7FD21F26452B005F2640 /* Background.swift */,
 				30F0CAD31F253F9800519D82 /* Bat.swift */,
 				30B1C2A31F2258AC00B3C55F /* Bee.swift */,
 				30F0CAD51F2540E400519D82 /* Blade.swift */,
@@ -215,6 +218,7 @@
 				306AB89F1F25C27E0085D5E5 /* HUD.swift in Sources */,
 				30F0CADD1F254BCB00519D82 /* EncounterManager.swift in Sources */,
 				30F0CAD01F253B9B00519D82 /* Star.swift in Sources */,
+				30BA7FD31F26452B005F2640 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
