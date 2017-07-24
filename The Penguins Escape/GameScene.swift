@@ -147,6 +147,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 // If this node adheres to GameSprite, call onTap:
                 gameSprite.onTap()
             }
+            // Check for HUD buttons:
+            if nodeTouched.name == "restartGame" {
+                // Transition to a new version of the GameScene to restart the game:
+                self.view?.presentScene(GameScene(size: self.size), transition: .crossFade(withDuration: 0.6))
+            } else if nodeTouched.name == "returnToMenu" {
+                // Transition to the main menu scene:
+                self.view?.presentScene(MenuScene(size: self.size), transition: .crossFade(withDuration: 0.6))
+            }
         }
         
         player.startFlapping()
@@ -208,6 +216,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for background in self.backgrounds {
             background.updatePosition(playerProgress: playerProgress)
         }
+    }
+    
+    func gameOver() {
+        // Show the restart and main menu buttons:
+        hud.showButtons()
     }
     
     

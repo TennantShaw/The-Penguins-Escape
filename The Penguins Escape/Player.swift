@@ -216,6 +216,10 @@ class Player: SKSpriteNode, GameSprite {
         self.flapping = false
         // Stop forward movement:
         self.forawrdVelocity = 0
+        // Alert the GameScene:
+        if let gameScene = self.parent as? GameScene {
+            gameScene.gameOver()
+        }
     }
     
     func takeDamage() {
