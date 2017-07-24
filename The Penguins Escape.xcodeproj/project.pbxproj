@@ -26,6 +26,8 @@
 		30F0CAD81F25427300519D82 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CAD71F25427300519D82 /* Coin.swift */; };
 		30F0CADB1F25494700519D82 /* EncounterA.sks in Resources */ = {isa = PBXBuildFile; fileRef = 30F0CADA1F25494700519D82 /* EncounterA.sks */; };
 		30F0CADD1F254BCB00519D82 /* EncounterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0CADC1F254BCB00519D82 /* EncounterManager.swift */; };
+		30F0CADF1F254F1E00519D82 /* EncounterB.sks in Resources */ = {isa = PBXBuildFile; fileRef = 30F0CADE1F254F1E00519D82 /* EncounterB.sks */; };
+		30F0CAE11F254F2600519D82 /* EncounterC.sks in Resources */ = {isa = PBXBuildFile; fileRef = 30F0CAE01F254F2600519D82 /* EncounterC.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		30F0CAD71F25427300519D82 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		30F0CADA1F25494700519D82 /* EncounterA.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterA.sks; sourceTree = "<group>"; };
 		30F0CADC1F254BCB00519D82 /* EncounterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterManager.swift; sourceTree = "<group>"; };
+		30F0CADE1F254F1E00519D82 /* EncounterB.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterB.sks; sourceTree = "<group>"; };
+		30F0CAE01F254F2600519D82 /* EncounterC.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterC.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				30F0CADA1F25494700519D82 /* EncounterA.sks */,
+				30F0CADE1F254F1E00519D82 /* EncounterB.sks */,
+				30F0CAE01F254F2600519D82 /* EncounterC.sks */,
 			);
 			name = Encounters;
 			sourceTree = "<group>";
@@ -174,8 +180,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30F0CADF1F254F1E00519D82 /* EncounterB.sks in Resources */,
 				30B1C2931F21196900B3C55F /* Main.storyboard in Resources */,
 				30B1C28A1F21196900B3C55F /* GameScene.sks in Resources */,
+				30F0CAE11F254F2600519D82 /* EncounterC.sks in Resources */,
 				30B1C2951F21196900B3C55F /* Assets.xcassets in Resources */,
 				30F0CADB1F25494700519D82 /* EncounterA.sks in Resources */,
 				30B1C2981F21196900B3C55F /* LaunchScreen.storyboard in Resources */,
