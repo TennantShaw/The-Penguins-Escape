@@ -91,6 +91,38 @@ class Player: SKSpriteNode, GameSprite {
         // Group the soaring animation with the rotation down:
         soarAnimation = SKAction.group([SKAction.repeatForever(soarAction),
                                         rotateDownAction])
+        // Create the taking damage animation
+        let damageStart = SKAction.run {
+            // Allow the penguin to pass through enemies:
+            self.physicsBody?.categoryBitMask = PhysicsCategory.damagedPenguin.rawValue
+        }
+        // Create an opacity pulse, slow at first and fast at the end:
+        let slowFade = SKAction.sequence([
+            SKAction.fadeAlpha(to: 0.3, duration: 0.35),
+            SKAction.fadeAlpha(to: 0.7, duration: 0.35)
+            ])
+        let fastFade = SKAction.sequence([
+            SKAction.fadeAlpha(to: 0.3, duration: 0.2),
+            SKAction.fadeAlpha(to: 0.7, duration: 0.2)
+            ])
+        let fadeOutAndIn = SKAction.sequence([
+            SKAction.repeat(slowFade, count: 2),
+            SKAction.repeat(fastFade, count: 5),
+            SKAction.fadeAlpha(to: 1, duration: 0.15)
+            ])
+        // Return the penquin to normal:
+        let damageEnd = SKAction.run {
+            self.physicsBody?.categoryBitMask = PhysicsCategory.penguin.rawValue
+            // Turn off the newly damaged flag:
+            self.damaged = false
+        }
+        
+        // Store the whole sequence in the damageAnimation property:
+        self.damageAnimation = SKAction.sequence([
+            damageStart,
+            fadeOutAndIn,
+            damageEnd
+            ])
     }
     
     // Implement onTap to conform to the GameSprite protocol:
@@ -152,6 +184,8 @@ class Player: SKSpriteNode, GameSprite {
     func takeDamage() {
         // if invulnerable or damaged, return:
         if self.invulnerable || self.damaged { return }
+        // Set the damaged state to true after being hit:
+        self.damaged = true
         
         // Remove one from our health pool
         self.health -= 1
