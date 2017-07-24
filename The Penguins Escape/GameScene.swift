@@ -93,6 +93,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 print(self.coinsCollected)
             }
         case PhysicsCategory.powerup.rawValue:
+            player.starPower()
             print("start the power-up")
         default:
             print("Contact with no game logic")
