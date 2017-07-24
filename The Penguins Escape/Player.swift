@@ -9,6 +9,7 @@
 import SpriteKit
 
 class Player: SKSpriteNode, GameSprite {
+    // MARK: - Properties
     var initialSize = CGSize(width: 64, height: 64)
     var textureAtlas: SKTextureAtlas = SKTextureAtlas(named: "Pierre")
     // Pierre has multiple animations. right now we will create one animation for flying up and one for going down:
@@ -21,7 +22,20 @@ class Player: SKSpriteNode, GameSprite {
     let maxFlappingForce: CGFloat = 57000
     // Pierre should slow down when he flies too high:
     let maxHeight: CGFloat = 1000
+    // The player will be able to take 3 hits before game over:
+    var health: Int = 3
+    // Keep track of when the player is invulnerable:
+    var invulnerable = false
+    // Keep track of when the player is newly damaged:
+    var damaged = false
+    // We will create animations to run when the player takes damage or dies. Add these properties to store them:
+    var damageAnimation = SKAction()
+    var dieAnimation = SKAction()
+    // We want to stop forward velocity if the player dies, so we will store forward velocity as a property:
+    var forawrdVelocity: CGFloat = 200
     
+    
+    // MARK: - Initializers
     init() {
         // Call the init function on the base class (SKSpriteNode)
         super.init(texture: nil, color: .clear, size: initialSize)
@@ -46,6 +60,13 @@ class Player: SKSpriteNode, GameSprite {
         self.physicsBody?.collisionBitMask = PhysicsCategory.ground.rawValue
     }
     
+    // Satisfy the NSCoder required init:
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    
+    // MARK: - Methods
     func createAnimations() {
         let rotateUpAction = SKAction.rotate(toAngle: 0, duration: 0.475)
         rotateUpAction.timingMode = .easeOut
@@ -76,11 +97,6 @@ class Player: SKSpriteNode, GameSprite {
     func onTap() {
     }
     
-    // Satisfy the NSCoder required init:
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     func update() {
         // If flapping, apply a new force to push Pierre higher.
         if self.flapping {
@@ -101,11 +117,12 @@ class Player: SKSpriteNode, GameSprite {
         }
         
         // Set a constant velocity to the right:
-        self.physicsBody?.velocity.dx = 200
+        self.physicsBody?.velocity.dx = self.forawrdVelocity
     }
     
     // Begin the flap animation, set flapping to true:
     func startFlapping() {
+        if self.health <= 0 { return }
         self.removeAction(forKey: "soarAnimation")
         self.run(flyAnimation, withKey: "flapAnimation")
         self.flapping = true
@@ -113,8 +130,37 @@ class Player: SKSpriteNode, GameSprite {
     
     // Stop the flap animation, set flapping to false:
     func stopFlapping() {
+        if self.health <= 0 { return }
         self.removeAction(forKey: "flapAnimation")
         self.run(soarAnimation, withKey: "soarAnimation")
         self.flapping = false
+    }
+    
+    func die() {
+        // Make sure the player is fully visible:
+        self.alpha = 1
+        // Remove all animations:
+        self.removeAllActions()
+        // Run the die animation:
+        self.run(self.dieAnimation)
+        // Prevent any further upward movement:
+        self.flapping = false
+        // Stop forward movement:
+        self.forawrdVelocity = 0
+    }
+    
+    func takeDamage() {
+        // if invulnerable or damaged, return:
+        if self.invulnerable || self.damaged { return }
+        
+        // Remove one from our health pool
+        self.health -= 1
+        if self.health == 0 {
+            // If we are out of health, run the die function:
+            die()
+        } else {
+            // Run the take damage animation:
+            self.run(self.damageAnimation)
+        }
     }
 }
