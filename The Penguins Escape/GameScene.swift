@@ -20,6 +20,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var nextEncounterSpawnPosition = CGFloat(150)
     let powerUpStar = Star()
     var coinsCollected = 0
+    let hud = HUD()
     
     
     // MARK: - View Life Cycle
@@ -58,6 +59,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(powerUpStar)
         powerUpStar.position = CGPoint(x: -2000, y: -2000)
         self.physicsWorld.contactDelegate = self
+        // Add the camera itself to the scene's node tree:
+        self.addChild(self.camera!)
+        // Position the camera node above the game elements:
+        self.camera!.zPosition = 50
+        // Create the HUD's child nodes:
+        hud.createHudNodes(screenSize: self.size)
+        // Add the HUD to the camera's node tree:
+        self.camera!.addChild(hud)
     }
     
     
@@ -78,9 +87,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Find the type of contact:
         switch otherBody.categoryBitMask {
         case PhysicsCategory.ground.rawValue:
+            hud.setHealthDisplay(newHealth: player.health)
             print("hit the ground")
             player.takeDamage()
         case PhysicsCategory.enemy.rawValue:
+            hud.setHealthDisplay(newHealth: player.health)
             print("take damage")
             player.takeDamage()
         case PhysicsCategory.coin.rawValue:
@@ -90,6 +101,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 coin.collect()
                 // Add the value of the coin to our counter:
                 self.coinsCollected += coin.value
+                hud.setCoinCountDisplay(newCoinCount: self.coinsCollected)
                 print(self.coinsCollected)
             }
         case PhysicsCategory.powerup.rawValue:

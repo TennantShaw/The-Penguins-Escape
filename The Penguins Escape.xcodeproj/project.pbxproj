@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		306AB89F1F25C27E0085D5E5 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB89E1F25C27E0085D5E5 /* HUD.swift */; };
 		30B1C2881F21196900B3C55F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1C2871F21196900B3C55F /* AppDelegate.swift */; };
 		30B1C28A1F21196900B3C55F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 30B1C2891F21196900B3C55F /* GameScene.sks */; };
 		30B1C28C1F21196900B3C55F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 30B1C28B1F21196900B3C55F /* Actions.sks */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		306AB89E1F25C27E0085D5E5 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		30B1C2841F21196900B3C55F /* The Penguins Escape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Penguins Escape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B1C2871F21196900B3C55F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30B1C2891F21196900B3C55F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				30B1C28F1F21196900B3C55F /* GameViewController.swift */,
 				30B1C2A51F2267B800B3C55F /* Ground.swift */,
 				30F0CAD11F253E3900519D82 /* MadFly.swift */,
+				306AB89E1F25C27E0085D5E5 /* HUD.swift */,
 				30B1C2A71F23193900B3C55F /* Player.swift */,
 				30F0CACF1F253B9B00519D82 /* Star.swift */,
 				30B1C2941F21196900B3C55F /* Assets.xcassets */,
@@ -209,6 +212,7 @@
 				30B1C2881F21196900B3C55F /* AppDelegate.swift in Sources */,
 				30F0CAD61F2540E400519D82 /* Blade.swift in Sources */,
 				30F0CAD21F253E3900519D82 /* MadFly.swift in Sources */,
+				306AB89F1F25C27E0085D5E5 /* HUD.swift in Sources */,
 				30F0CADD1F254BCB00519D82 /* EncounterManager.swift in Sources */,
 				30F0CAD01F253B9B00519D82 /* Star.swift in Sources */,
 			);
