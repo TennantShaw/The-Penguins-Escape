@@ -22,7 +22,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var coinsCollected = 0
     let hud = HUD()
     var backgrounds: [Background] = []
-    
+    let particlePool = ParticlePool()
+    let heartCrate = Crate()
     
     // MARK: - View Life Cycle
     override func didMove(to view: SKView) {
@@ -91,6 +92,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         // Play the start sound:
         self.run(SKAction.playSoundFileNamed("Sound/StartGame.aif", waitForCompletion: false))
+        // Add emitter nodes to GameScene node tree:
+        particlePool.addEmittersToScene(scene: self)
+        // Spawn the heart crate, out of the way for now
+        self.addChild(heartCrate)
+        heartCrate.position = CGPoint(x: -2100, y: -2100)
+        heartCrate.turnToHeartCrate()
     }
     
     
@@ -130,7 +137,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         case PhysicsCategory.powerup.rawValue:
             player.starPower()
-            print("start the power-up")
+        case PhysicsCategory.crate.rawValue:
+            if let crate = otherBody.node as? Crate {
+                // Call the explode function with a reference to the GameScene:
+                crate.explode(gameScene: self)
+            }
         default:
             print("Contact with no game logic")
         }
@@ -212,6 +223,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     powerUpStar.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
                 }
             }
+            if starRoll == 1 {
+                // Position the heart crate after this encounter:
+                heartCrate.reset()
+                heartCrate.position = CGPoint(x: nextEncounterSpawnPosition - 600, y: 270)
+            }
         }
         
         // Position the backgrounds:
@@ -241,4 +257,5 @@ enum PhysicsCategory: UInt32 {
     case enemy = 8
     case coin = 16
     case powerup = 32
+    case crate = 64
 }

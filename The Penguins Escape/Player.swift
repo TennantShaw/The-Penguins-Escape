@@ -35,6 +35,7 @@ class Player: SKSpriteNode, GameSprite {
     var forawrdVelocity: CGFloat = 200
     let powerupSound = SKAction.playSoundFileNamed("Sound/Powerup.aif", waitForCompletion: false)
     let hurtSound = SKAction.playSoundFileNamed("Sound/Hurt.aif", waitForCompletion: false)
+    let maxHealth = 3
     
     
     // MARK: - Initializers
@@ -58,7 +59,8 @@ class Player: SKSpriteNode, GameSprite {
         self.physicsBody?.contactTestBitMask = PhysicsCategory.enemy.rawValue |
             PhysicsCategory.ground.rawValue |
             PhysicsCategory.powerup.rawValue |
-            PhysicsCategory.coin.rawValue
+            PhysicsCategory.coin.rawValue |
+            PhysicsCategory.crate.rawValue
         self.physicsBody?.collisionBitMask = PhysicsCategory.ground.rawValue
         // Grant a momentary reprieve from gravity:
         self.physicsBody?.affectedByGravity = false

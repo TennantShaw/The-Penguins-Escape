@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		305487F71F28277300E9793F /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = 305487F61F28277300E9793F /* Sound */; };
+		305487F91F2839CB00E9793F /* Crate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305487F81F2839CB00E9793F /* Crate.swift */; };
+		305487FB1F283BD900E9793F /* HeartExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 305487FA1F283BD900E9793F /* HeartExplosion.sks */; };
+		305487FD1F28439700E9793F /* CrateExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 305487FC1F28439700E9793F /* CrateExplosion.sks */; };
+		305487FF1F28446500E9793F /* ParticlePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305487FE1F28446500E9793F /* ParticlePool.swift */; };
 		306AB89F1F25C27E0085D5E5 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AB89E1F25C27E0085D5E5 /* HUD.swift */; };
 		30B1C2881F21196900B3C55F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1C2871F21196900B3C55F /* AppDelegate.swift */; };
 		30B1C28A1F21196900B3C55F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 30B1C2891F21196900B3C55F /* GameScene.sks */; };
@@ -37,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		305487F61F28277300E9793F /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sound; sourceTree = "<group>"; };
+		305487F81F2839CB00E9793F /* Crate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crate.swift; sourceTree = "<group>"; };
+		305487FA1F283BD900E9793F /* HeartExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HeartExplosion.sks; sourceTree = "<group>"; };
+		305487FC1F28439700E9793F /* CrateExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CrateExplosion.sks; sourceTree = "<group>"; };
+		305487FE1F28446500E9793F /* ParticlePool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticlePool.swift; sourceTree = "<group>"; };
 		306AB89E1F25C27E0085D5E5 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		30B1C2841F21196900B3C55F /* The Penguins Escape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Penguins Escape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B1C2871F21196900B3C55F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,7 +107,9 @@
 				305487F61F28277300E9793F /* Sound */,
 				30B1C2991F21196900B3C55F /* Info.plist */,
 				30B1C28B1F21196900B3C55F /* Actions.sks */,
+				305487FC1F28439700E9793F /* CrateExplosion.sks */,
 				30B1C2891F21196900B3C55F /* GameScene.sks */,
+				305487FA1F283BD900E9793F /* HeartExplosion.sks */,
 				30BA7FD41F264B7F005F2640 /* PierrePath.sks */,
 				30B1C2871F21196900B3C55F /* AppDelegate.swift */,
 				30BA7FD21F26452B005F2640 /* Background.swift */,
@@ -107,6 +117,7 @@
 				30B1C2A31F2258AC00B3C55F /* Bee.swift */,
 				30F0CAD51F2540E400519D82 /* Blade.swift */,
 				30F0CAD71F25427300519D82 /* Coin.swift */,
+				305487F81F2839CB00E9793F /* Crate.swift */,
 				30F0CADC1F254BCB00519D82 /* EncounterManager.swift */,
 				30B1C28D1F21196900B3C55F /* GameScene.swift */,
 				30B1C2A11F2257C300B3C55F /* GameSprite.swift */,
@@ -115,6 +126,7 @@
 				306AB89E1F25C27E0085D5E5 /* HUD.swift */,
 				30F0CAD11F253E3900519D82 /* MadFly.swift */,
 				30BA7FD61F264ED7005F2640 /* MenuScene.swift */,
+				305487FE1F28446500E9793F /* ParticlePool.swift */,
 				30B1C2A71F23193900B3C55F /* Player.swift */,
 				30F0CACF1F253B9B00519D82 /* Star.swift */,
 				30B1C2941F21196900B3C55F /* Assets.xcassets */,
@@ -196,8 +208,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F0CADF1F254F1E00519D82 /* EncounterB.sks in Resources */,
+				305487FD1F28439700E9793F /* CrateExplosion.sks in Resources */,
 				30B1C2931F21196900B3C55F /* Main.storyboard in Resources */,
 				305487F71F28277300E9793F /* Sound in Resources */,
+				305487FB1F283BD900E9793F /* HeartExplosion.sks in Resources */,
 				30B1C28A1F21196900B3C55F /* GameScene.sks in Resources */,
 				30F0CAE11F254F2600519D82 /* EncounterC.sks in Resources */,
 				30B1C2951F21196900B3C55F /* Assets.xcassets in Resources */,
@@ -229,8 +243,10 @@
 				306AB89F1F25C27E0085D5E5 /* HUD.swift in Sources */,
 				30F0CADD1F254BCB00519D82 /* EncounterManager.swift in Sources */,
 				30BA7FD71F264ED7005F2640 /* MenuScene.swift in Sources */,
+				305487F91F2839CB00E9793F /* Crate.swift in Sources */,
 				30F0CAD01F253B9B00519D82 /* Star.swift in Sources */,
 				30BA7FD31F26452B005F2640 /* Background.swift in Sources */,
+				305487FF1F28446500E9793F /* ParticlePool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
