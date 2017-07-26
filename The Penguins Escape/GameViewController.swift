@@ -9,8 +9,23 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import AVFoundation
 
 class GameViewController: UIViewController {
+    // MARK: - Properties
+    var musicPlayer = AVAudioPlayer()
+    override var shouldAutorotate: Bool {
+        return true
+    }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscape
+    }
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    
+    // MARK: - Methods
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
@@ -23,22 +38,22 @@ class GameViewController: UIViewController {
         menuScene.size = view.bounds.size
         // show the menu:
         skView.presentScene(menuScene)
-    }
-    
-    override var shouldAutorotate: Bool {
-        return true
-    }
-
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .landscape
+        
+        // Start the background music:
+        if let musicPath = Bundle.main.path(forResource: "Sound/BackgroundMusic.m4a", ofType: nil) {
+            let url = URL(fileURLWithPath: musicPath)
+            do {
+                musicPlayer = try AVAudioPlayer(contentsOf: url)
+                musicPlayer.numberOfLoops = -1
+                musicPlayer.prepareToPlay()
+                musicPlayer.play()
+            }
+            catch { /* Couldn't load music file */}
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
-    }
-
-    override var prefersStatusBarHidden: Bool {
-        return true
     }
 }
